@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container">
+      <mat-toolbar color="primary" *ngIf="verificar()">
+        <div style="display: flex; justify-content: space-between; width: 100%">
+          <button mat-button routerLink="components/home-Alva">
+            <mat-icon>home</mat-icon> Inicio
+          </button>
+          <button  mat-button [matMenuTriggerFor]="menuExamen">Reportes</button>
+
+          <div>
+            <button
+              mat-button
+              [matMenuTriggerFor]="menuSalir"
+              routerLink="/login-final-guzman"
+              (click)="cerrar()"
+            >
+              Usuario: <span>{{ role }}</span
+              ><mat-icon>power_settings_new</mat-icon>
+            </button>
+          </div>
+        </div>
+      </mat-toolbar>
+
+      <mat-menu #menuExamen="matMenu">
+        <button mat-menu-item   routerLink="components/reporte01-sergio-leandro" (click)="reporte01()">Reporte01</button>
+
+      </mat-menu>
+
+      <mat-menu #menuSalir="matMenu">
+        <button mat-menu-item  routerLink="/login-guzman-alva" (click)="cerrar()">
+          <mat-icon>logout</mat-icon>
+          <span>Cerrar sesión</span>
+        </button>
+        <button mat-menu-item>
+          Rol: <span>{{ role }}</span>
+        </button>
+      </mat-menu>
+
+      <router-outlet></router-outlet>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,64 @@
+/* Contenedor principal de la tabla */
+.table-container {
+  width: 90%;  /* Aumenta el ancho de la tabla */
+  max-width: 1000px;  /* Aumenta el ancho máximo de la tabla */
+  margin-top: 30px;
+  margin-bottom: 30px;  /* Añade espacio debajo de la tabla */
+}
+
+/* Estilo básico de la tabla */
+table {
+  width: 100%; /* La tabla ocupa el 100% del contenedor */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para la tabla */
+  border-radius: 8px; /* Bordes redondeados */
+  background-color: #fff;
+}
+
+/* Encabezados de la tabla */
+.mat-header-cell, .mat-cell {
+  padding: 20px 25px; /* Aumenta el espaciado de las celdas */
+  font-size: 1.1rem; /* Aumenta el tamaño de la fuente */
+  text-align: center;  /* Centra el contenido en las celdas */
+}
+
+/* Estilo para el encabezado */
+.mat-header-row {
+  background-color: #1976d2;  /* Azul */
+  color: white;
+  font-weight: bold;
+  font-size: 1.2rem; /* Tamaño de fuente más grande en el encabezado */
+}
+
+/* Estilo para las filas */
+.mat-row {
+  background-color: #f9f9f9; /* Color de fondo para las filas */
+}
+
+.mat-row:hover {
+  background-color: #f1f1f1; /* Efecto hover para las filas */
+}
+
+/* Ajuste para el pie de tabla */
+.mat-footer-row {
+  background-color: #1976d2;  /* Azul para el pie de tabla */
+  color: white;
+  font-size: 0.9rem;  /* Reducir el tamaño de la fuente del pie */
+  font-weight: normal; /* Reducir el peso de la fuente */
+}
+
+/* Espaciado entre las filas y celdas */
+mat-table {
+  border-spacing: 0;
+  border-collapse: collapse;
+}
+
+/* Sombra para la tabla */
+.mat-elevation-z8 {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada */
+}
+
+/* Ajuste de la fuente para los botones en el pie de tabla (si los hay) */
+.mat-paginator {
+  font-size: 0.8rem;  /* Reducir tamaño de fuente en el pie si hay paginación */
+  padding: 10px; /* Ajuste en el espaciado del pie */
+}

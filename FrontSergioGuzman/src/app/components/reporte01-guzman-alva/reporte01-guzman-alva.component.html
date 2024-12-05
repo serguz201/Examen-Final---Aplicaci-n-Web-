@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container">
+      <div style="text-align: center">
+        <h1>Cantidad de ecosistemas que tienen la misma temperatura</h1>
+      </div>
+      <div style="text-align: center">
+        <canvas
+          baseChart
+          [datasets]="barChartData"
+          [labels]="barChartLabels"
+          [options]="barChartOptions"
+          [legend]="barChartLegend"
+          [type]="barChartType"
+        ></canvas>
+      </div>
+        <div class="container">
+          <br />
+          <h2>Leyenda</h2>
+          <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+            <!-- Position Column -->
+            <ng-container matColumnDef="slgavalor">
+              <th mat-header-cell *matHeaderCellDef>Valor</th>
+              <td mat-cell *matCellDef="let element">{{ element.slgavalor }}</td>
+            </ng-container>
+            <!-- Name Column -->
+            <ng-container matColumnDef="slgacantidadEcosistema">
+              <th mat-header-cell *matHeaderCellDef>Username</th>
+              <td mat-cell *matCellDef="let element">{{ element.slgacantidadEcosistema }}</td>
+            </ng-container>
+            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+            <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+      </table>
+    </div>
+  </div>
+</body>
+</html>
